@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: FFE4B5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.happypets.ServicesController">
+    <children>
+        <AnchorPane layoutY="58.0" prefHeight="643.0" prefWidth="1100.0" style="-fx-background-color: #D8BFD8;">
+            <children>
+                <TableView fx:id="services_table" layoutX="28.0" layoutY="84.0" onMousePressed="#getSelected" prefHeight="498.0" prefWidth="789.0">
+                    <columns>
+                        <TableColumn fx:id="id_column" prefWidth="71.0" text="ID послуги" />
+                        <TableColumn fx:id="id_patient_column" prefWidth="71.0" text="ID пацієнта" />
+                        <TableColumn fx:id="serv_type_column" prefWidth="95.0" text="Вид послуги" />
+                        <TableColumn fx:id="medicine_column" prefWidth="119.0" text="Використані ліки" />
+                        <TableColumn fx:id="status_column" prefWidth="105.0" text="Стан пацієнта" />
+                  <TableColumn fx:id="date_column" prefWidth="102.0" text="Дата надання" />
+                  <TableColumn fx:id="doctor_column" prefWidth="119.0" text="ПІБ лікаря" />
+                  <TableColumn fx:id="price_column" prefWidth="106.0" text="Вартість послуги" />
+                    </columns>
+                </TableView>
+                <Button fx:id="add_button" layoutX="839.0" layoutY="540.0" mnemonicParsing="false" onMousePressed="#addService" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px;" text="Додати" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="edit_button" layoutX="972.0" layoutY="540.0" mnemonicParsing="false" onMousePressed="#EditService" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px;" text="Редагувати" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="15.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="search_field" layoutX="106.0" layoutY="16.0" prefHeight="39.0" prefWidth="167.0" promptText="Введіть дані" style="-fx-background-radius: 5px;" />
+                <Label layoutX="21.0" layoutY="21.0" text="Пошук:" textFill="MOCCASIN">
+                    <font>
+                        <Font name="Ayuthaya" size="20.0" />
+                    </font>
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Label>
+                <Label layoutX="855.0" layoutY="21.0" text="Редагувати дані:" textAlignment="CENTER" textFill="MOCCASIN" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Ayuthaya" size="22.0" />
+                    </font>
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Label>
+                <TextField fx:id="id_field" layoutX="874.0" layoutY="65.0" prefHeight="39.0" prefWidth="175.0" promptText="Код послуги" style="-fx-background-radius: 5px;" />
+                <TextField fx:id="patient_id_field" layoutX="874.0" layoutY="122.0" prefHeight="39.0" prefWidth="175.0" promptText="Код пацієнта" style="-fx-background-radius: 5px;" />
+                <TextField fx:id="type_field" layoutX="874.0" layoutY="181.0" prefHeight="39.0" prefWidth="175.0" promptText="Вид послуги" style="-fx-background-radius: 5px;" />
+                <TextField fx:id="medicine_field" layoutX="874.0" layoutY="239.0" prefHeight="39.0" prefWidth="175.0" promptText="Використані ліки" style="-fx-background-radius: 5px;" />
+                <TextField fx:id="health_status_field" layoutX="874.0" layoutY="298.0" prefHeight="39.0" prefWidth="175.0" promptText="Стан здоровʼя пацієнта" style="-fx-background-radius: 5px;" />
+            <Button fx:id="refresh_button" layoutX="372.0" layoutY="20.0" mnemonicParsing="false" onMousePressed="#initialize" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px;" text="Оновити" textFill="WHITE">
+               <font>
+                  <Font name="Ayuthaya" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="date_field" layoutX="874.0" layoutY="359.0" prefHeight="39.0" prefWidth="175.0" promptText="Дата надання послуги" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="doctor_field" layoutX="874.0" layoutY="417.0" prefHeight="39.0" prefWidth="175.0" promptText="ПІБ лікаря, який надавав" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="price_field" layoutX="874.0" layoutY="478.0" prefHeight="39.0" prefWidth="175.0" promptText="Вартість послуги" style="-fx-background-radius: 5px;" />
+            <Button fx:id="delete_button" layoutX="586.0" layoutY="20.0" mnemonicParsing="false" onMousePressed="#Delete" prefHeight="32.0" prefWidth="110.0" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px;" text="Видалити" textFill="WHITE">
+               <font>
+                  <Font name="Ayuthaya" size="15.0" />
+               </font>
+            </Button>
+            </children>
+        </AnchorPane>
+        <Label layoutX="474.0" layoutY="14.0" text="HappyPets" textFill="#d7a7d7">
+            <font>
+                <Font name="Ayuthaya" size="28.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

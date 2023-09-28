@@ -33,7 +33,7 @@ public class LoginController {
     private Button patientsButton;
 
     @FXML
-    private Button sheduleButton;
+    private Button servicesButton;
 
     @FXML
     void ffdca1(ActionEvent event) {
@@ -60,6 +60,11 @@ public class LoginController {
         catalogButton.setOnAction(actionEvent ->{
             sc.openNewScene("catalog_table.fxml",patientsButton);
         });
+
+        servicesButton.setOnAction(actionEvent ->{
+            sc.openNewScene("services.fxml",patientsButton);
+        });
+
     }
 
 }

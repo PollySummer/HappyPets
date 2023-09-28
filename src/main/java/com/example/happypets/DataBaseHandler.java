@@ -173,4 +173,49 @@ public class DataBaseHandler extends Configs{
         }
         return catalogList;
     }
+
+    public void addService(Services services){
+        String insert= "INSERT INTO HappyPets.services"+"("+Const.SERVICES_ID+","
+                +Const.SERVICES_PAT_ID+","+Const.SERVICES_TYPE+","+Const.SERVICES_MEDICINE+","
+                +Const.SERVICES_STATUS+","+Const.SERVICES_DATE+","+Const.SERVICES_DOCTOR+","
+                +Const.SERVICES_PRICE+")"+"VALUES(?,?,?,?,?,?,?,?)";
+
+
+        try {
+            PreparedStatement preparedStatement = getDbConnection().prepareStatement(insert);
+            preparedStatement.setString(1, String.valueOf(services.getServ_id()));
+            preparedStatement.setString(2, String.valueOf(services.getPat_id()));
+            preparedStatement.setString(3, services.getServ_type());
+            preparedStatement.setString(4, services.getMedicine());
+            preparedStatement.setString(5, services.getPat_status());
+            preparedStatement.setString(6, services.getDate());
+            preparedStatement.setString(7, services.getDoctor());
+            preparedStatement.setString(8, String.valueOf(services.getPrice()));
+
+            preparedStatement.executeUpdate();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static ObservableList<Services> getServices() throws SQLException, ClassNotFoundException {
+
+        Connection con= getDbConnection();
+        ObservableList<Services> listServices= FXCollections.observableArrayList();
+
+        PreparedStatement ps=con.prepareStatement("select *from services");
+        ResultSet rs=ps.executeQuery();
+
+        while (rs.next()){
+            listServices.add(new Services(
+                    rs.getInt(Const.SERVICES_ID),rs.getInt(Const.SERVICES_PAT_ID),rs.getString(Const.SERVICES_TYPE),
+                    rs.getString(Const.SERVICES_MEDICINE),rs.getString(Const.SERVICES_STATUS),rs.getString(Const.SERVICES_DATE),
+                    rs.getString(Const.SERVICES_DOCTOR),rs.getInt(Const.SERVICES_PRICE)));
+        }
+        return listServices;
+    }
+
 }

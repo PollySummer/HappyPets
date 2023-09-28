@@ -34,5 +34,19 @@ public class Const {
     public static final String CATALOG_PRICE="service_price";
     public static final String CATALOG_INFO="add_info";
 
+    //services
+    public static final String SERVICES_ID="id_service";
+    public static final String SERVICES_PAT_ID="patient_id";
+    public static final String SERVICES_TYPE="type_service";
+    public static final String SERVICES_MEDICINE="medicine_name";
+
+    public static final String SERVICES_STATUS="patient_status";
+
+    public static final String SERVICES_DATE="provision_date";
+
+    public static final String SERVICES_DOCTOR="doctor_name";
+
+    public static final String SERVICES_PRICE="final_price";
+
 
 }

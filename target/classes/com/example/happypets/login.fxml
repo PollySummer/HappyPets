@@ -33,9 +33,9 @@
                         <Font name="Ayuthaya" size="19.0" />
                     </font>
                 </Button>
-                <Button fx:id="sheduleButton" layoutX="148.0" layoutY="340.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #ffdca1; -fx-background-radius: 5px;" text="Графік роботи" textFill="WHITE">
+                <Button fx:id="servicesButton" layoutX="148.0" layoutY="340.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #ffdca1; -fx-background-radius: 5px;" text="Надані послуги" textFill="WHITE">
                     <font>
-                        <Font name="Ayuthaya" size="19.0" />
+                        <Font name="Ayuthaya" size="18.0" />
                     </font>
                 </Button>
                 <Button fx:id="catalogButton" layoutX="577.0" layoutY="340.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #ffdca1; -fx-background-radius: 5px;" text="Каталог послуг" textFill="WHITE">
