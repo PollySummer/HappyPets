@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: FFE4B5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.happypets.EmployeesController">
+    <children>
+        <AnchorPane layoutY="55.0" prefHeight="645.0" prefWidth="1100.0" style="-fx-background-color: #D8BFD8;">
+         <children>
+            <TableView fx:id="employees_table" layoutX="14.0" layoutY="70.0" onMousePressed="#toSelect" prefHeight="526.0" prefWidth="775.0">
+              <columns>
+                <TableColumn fx:id="name_column" prefWidth="87.0" text="Імʼя" />
+                <TableColumn fx:id="lastname_column" prefWidth="106.0" text="Прізвище" />
+                  <TableColumn fx:id="birth_column" prefWidth="103.0" text="Дата народження" />
+                  <TableColumn fx:id="work_column" prefWidth="101.0" text="Напрям роботи" />
+                  <TableColumn fx:id="experience_column" prefWidth="58.0" text="Стаж" />
+                  <TableColumn fx:id="phone_column" prefWidth="84.0" text="Телефон" />
+                  <TableColumn fx:id="email_column" prefWidth="97.0" text="Ел. пошта" />
+                  <TableColumn fx:id="password_column" prefWidth="91.0" text="Пароль" />
+                  <TableColumn fx:id="id_column" prefWidth="47.0" text="ID" />
+              </columns>
+            </TableView>
+            <Button fx:id="back_button" layoutX="28.0" layoutY="14.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="92.0" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px\;" text="Назад" textFill="WHITE">
+               <font>
+                  <Font name="Ayuthaya" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="add_button" layoutX="211.0" layoutY="14.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="92.0" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px;" text="Додати" textFill="WHITE">
+               <font>
+                  <Font name="Ayuthaya" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="delete_button" layoutX="347.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#Delete" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px;" text="Видалити" textFill="WHITE">
+               <font>
+                  <Font name="Ayuthaya" size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="change_button" layoutX="889.0" layoutY="538.0" mnemonicParsing="false" onMousePressed="#editData" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px;" text="Редагувати" textFill="WHITE">
+               <font>
+                  <Font name="Ayuthaya" size="15.0" />
+               </font>
+            </Button>
+            <TextField fx:id="search_field" layoutX="595.0" layoutY="16.0" prefHeight="29.0" prefWidth="152.0" promptText="Введіть дані" style="-fx-background-radius: 5px;" />
+            <Label layoutX="508.0" layoutY="17.0" text="Пошук:" textFill="MOCCASIN">
+               <font>
+                  <Font name="Ayuthaya" size="18.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <Label layoutX="843.0" layoutY="46.0" text="Редагувати дані:" textAlignment="CENTER" textFill="MOCCASIN" textOverrun="CENTER_WORD_ELLIPSIS">
+               <font>
+                  <Font name="Ayuthaya" size="21.0" />
+               </font>
+               <effect>
+                  <Bloom />
+               </effect>
+            </Label>
+            <TextField fx:id="edit_name" layoutX="856.0" layoutY="110.0" prefHeight="32.0" prefWidth="175.0" promptText="Імʼя" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="edit_lastname" layoutX="856.0" layoutY="162.0" prefHeight="32.0" prefWidth="175.0" promptText="Прізвище" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="edit_birth" layoutX="856.0" layoutY="219.0" prefHeight="32.0" prefWidth="175.0" promptText="Дата народження" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="edit_work" layoutX="856.0" layoutY="272.0" prefHeight="32.0" prefWidth="175.0" promptText="Напрям роботи" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="edit_expirience" layoutX="856.0" layoutY="323.0" prefHeight="32.0" prefWidth="175.0" promptText="Стаж роботи" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="edit_phone" layoutX="856.0" layoutY="376.0" prefHeight="32.0" prefWidth="175.0" promptText="Номер телефону" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="edit_email" layoutX="856.0" layoutY="429.0" prefHeight="32.0" prefWidth="175.0" promptText="Електронна пошта" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="edit_pass" layoutX="856.0" layoutY="480.0" prefHeight="32.0" prefWidth="175.0" promptText="Пароль" style="-fx-background-radius: 5px;" />
+         </children>
+        </AnchorPane>
+        <Label layoutX="474.0" layoutY="14.0" text="HappyPets" textFill="#d7a7d7">
+            <font>
+                <Font name="Ayuthaya" size="28.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

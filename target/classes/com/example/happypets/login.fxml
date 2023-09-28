@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: FFE4B5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.happypets.LoginController">
+    <children>
+        <AnchorPane layoutY="59.0" prefHeight="591.0" prefWidth="900.0" style="-fx-background-color: #D8BFD8;">
+            <children>
+                <Label layoutX="296.0" layoutY="52.0" text="Ласкаво просимо!" textFill="#ffdca1">
+                    <font>
+                        <Font name="Ayuthaya" size="32.0" />
+                    </font>
+               <effect>
+                  <Bloom />
+               </effect>
+                </Label>
+                <Button fx:id="patientsButton" layoutX="148.0" layoutY="152.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #ffdca1; -fx-background-radius: 5px;" text="Пацієнти" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="19.0" />
+                    </font>
+                </Button>
+                <Button fx:id="employeeButton" layoutX="577.0" layoutY="152.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" style="-fx-background-radius: 5px; -fx-background-color: #ffdca1;" text="Працівники" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="19.0" />
+                    </font>
+                </Button>
+                <Button fx:id="sheduleButton" layoutX="148.0" layoutY="340.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #ffdca1; -fx-background-radius: 5px;" text="Графік роботи" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="19.0" />
+                    </font>
+                </Button>
+                <Button fx:id="catalogButton" layoutX="577.0" layoutY="340.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #ffdca1; -fx-background-radius: 5px;" text="Каталог послуг" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="18.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <Label layoutX="358.0" layoutY="8.0" text="HappyPets" textFill="#d7a7d7">
+            <font>
+                <Font name="Ayuthaya" size="34.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

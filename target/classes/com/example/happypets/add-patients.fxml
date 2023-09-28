@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: FFE4B5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.happypets.AddingController">
+    <children>
+        <AnchorPane layoutY="56.0" prefHeight="595.0" prefWidth="900.0" style="-fx-background-color: #D8BFD8;">
+            <children>
+                <TextField fx:id="animal_id_field" layoutX="223.0" layoutY="71.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="364.0" layoutY="17.0" text="Новий пацієнт:" textFill="#f8d7a2">
+                    <font>
+                        <Font name="Ayuthaya" size="24.0" />
+                    </font>
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Label>
+                <Button fx:id="SignUpPatientButton" layoutX="389.0" layoutY="522.0" mnemonicParsing="false" style="-fx-background-color: #ffe4b5;" text="Зареєструватися" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="17.0" />
+                    </font>
+                </Button>
+                <Label layoutX="21.0" layoutY="77.0" text="Персональний код:" textFill="#f8f8f8">
+                    <font>
+                        <Font name="Ayuthaya" size="19.0" />
+                    </font>
+                </Label>
+                <Label layoutX="20.0" layoutY="151.0" text="Імʼя пацієнта:" textFill="#f8f8f8">
+                    <font>
+                        <Font name="Ayuthaya" size="19.0" />
+                    </font>
+                </Label>
+                <Label layoutX="21.0" layoutY="226.0" text="Вид тварини:" textFill="#f8f8f8">
+                    <font>
+                        <Font name="Ayuthaya" size="19.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="animal_name_field" layoutX="223.0" layoutY="145.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="animal_kind_field" layoutX="223.0" layoutY="220.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="animail_breede_field" layoutX="223.0" layoutY="298.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="animal_gender_field" layoutX="681.0" layoutY="71.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="animal_vaccin_field" layoutX="681.0" layoutY="145.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="animal_health_field" layoutX="681.0" layoutY="220.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="21.0" layoutY="304.0" text="Порода:" textFill="#f8f8f8">
+                    <font>
+                        <Font name="Ayuthaya" size="19.0" />
+                    </font>
+                </Label>
+                <Label layoutX="477.0" layoutY="77.0" text="Стать:" textFill="#f8f8f8">
+                    <font>
+                        <Font name="Ayuthaya" size="19.0" />
+                    </font>
+                </Label>
+                <Label layoutX="477.0" layoutY="151.0" text="Наявність вакцин:" textFill="#f8f8f8">
+                    <font>
+                        <Font name="Ayuthaya" size="19.0" />
+                    </font>
+                </Label>
+                <Label layoutX="477.0" layoutY="226.0" text="Стан здоровʼя:" textFill="#f8f8f8">
+                    <font>
+                        <Font name="Ayuthaya" size="19.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="animal_owner_field" layoutX="681.0" layoutY="296.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="477.0" layoutY="302.0" text="ПІБ власника:" textFill="#f8f8f8">
+                    <font>
+                        <Font name="Ayuthaya" size="19.0" />
+                    </font>
+                </Label>
+            <Label layoutX="21.0" layoutY="374.0" text="Вік:" textFill="#f8f8f8">
+               <font>
+                  <Font name="Ayuthaya" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="animal_age_field" layoutX="223.0" layoutY="368.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="animal_adress" layoutX="681.0" layoutY="374.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="477.0" layoutY="375.0" text="Адреса проживання:" textFill="#f8f8f8">
+               <font>
+                  <Font name="Ayuthaya" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="224.0" layoutY="454.0" text="Номер телефону:" textFill="#f8f8f8">
+               <font>
+                  <Font name="Ayuthaya" size="19.0" />
+               </font>
+            </Label>
+            <TextField fx:id="owners_phone" layoutX="416.0" layoutY="448.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            </children>
+        </AnchorPane>
+        <Label layoutX="374.0" layoutY="14.0" text="HappyPets" textFill="#d7a7d7">
+            <font>
+                <Font name="Ayuthaya" size="28.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

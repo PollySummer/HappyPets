@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: FFE4B5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.happypets.RegistrationController">
+    <children>
+        <AnchorPane layoutY="56.0" prefHeight="595.0" prefWidth="900.0" style="-fx-background-color: #D8BFD8;">
+            <children>
+                <TextField fx:id="name_field" layoutX="243.0" layoutY="108.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="371.0" layoutY="14.0" text="Регістрація" textFill="#f8d7a2">
+                    <font>
+                        <Font name="Ayuthaya" size="24.0" />
+                    </font>
+               <effect>
+                  <Bloom />
+               </effect>
+                </Label>
+                <Button fx:id="SignUpButton" layoutX="362.0" layoutY="515.0" mnemonicParsing="false" style="-fx-background-color: #ffe4b5;" text="Зареєструватися" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="17.0" />
+                    </font>
+                </Button>
+            <Label layoutX="20.0" layoutY="110.0" text="Імʼя:" textFill="#f8f8f8">
+               <font>
+                  <Font name="Ayuthaya" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="203.0" text="Фамілія:" textFill="#f8f8f8">
+               <font>
+                  <Font name="Ayuthaya" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="301.0" text="Дата народження:" textFill="#f8f8f8">
+               <font>
+                  <Font name="Ayuthaya" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lastname_field" layoutX="243.0" layoutY="201.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="data_field" layoutX="243.0" layoutY="298.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="work_field" layoutX="243.0" layoutY="397.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="experience_field" layoutX="681.0" layoutY="106.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="telephone_field" layoutX="681.0" layoutY="200.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="post_field" layoutX="681.0" layoutY="298.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="20.0" layoutY="399.0" text="Напрям роботи:" textFill="#f8f8f8">
+               <font>
+                  <Font name="Ayuthaya" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="478.0" layoutY="109.0" text="Робочий стаж:" textFill="#f8f8f8">
+               <font>
+                  <Font name="Ayuthaya" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="478.0" layoutY="202.0" text="Мобільний номер:" textFill="#f8f8f8">
+               <font>
+                  <Font name="Ayuthaya" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="478.0" layoutY="303.0" text="Електронна адреса:" textFill="#f8f8f8">
+               <font>
+                  <Font name="Ayuthaya" size="17.0" />
+               </font>
+            </Label>
+            <TextField fx:id="password_field" layoutX="681.0" layoutY="396.0" prefHeight="39.0" prefWidth="192.0" style="-fx-background-radius: 5px;">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="478.0" layoutY="399.0" text="Пароль:" textFill="#f8f8f8">
+               <font>
+                  <Font name="Ayuthaya" size="20.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+        <Label layoutX="374.0" layoutY="14.0" text="HappyPets" textFill="#d7a7d7">
+            <font>
+                <Font name="Ayuthaya" size="28.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

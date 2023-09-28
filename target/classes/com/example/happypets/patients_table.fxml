@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Button?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1100.0" style="-fx-background-color: FFE4B5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.happypets.PatientsController">
+    <children>
+        <AnchorPane layoutY="58.0" prefHeight="643.0" prefWidth="1100.0" style="-fx-background-color: #D8BFD8;">
+            <children>
+                <TableView fx:id="patients_table" layoutX="14.0" layoutY="63.0" onMousePressed="#getSelected" prefHeight="509.0" prefWidth="878.0">
+                    <columns>
+                        <TableColumn fx:id="id_column" prefWidth="56.0" text="ID" />
+                        <TableColumn fx:id="name_column" prefWidth="85.0" text="Імʼя пацієнта" />
+                        <TableColumn fx:id="kind_column" prefWidth="74.0" text="Вид" />
+                        <TableColumn fx:id="breed_column" prefWidth="78.0" text="Порода" />
+                        <TableColumn fx:id="age_column" prefWidth="64.0" text="Вік" />
+                        <TableColumn fx:id="gender_column" text="Стать" />
+                        <TableColumn fx:id="vaccination_column" prefWidth="81.0" text="Вакцинація" />
+                        <TableColumn fx:id="health_column" prefWidth="92.0" text="Стан здоровʼя" />
+                        <TableColumn fx:id="owner_column" prefWidth="84.0" text="Імʼя хазяїна" />
+                  <TableColumn fx:id="adress_column" prefWidth="96.0" text="Адреса" />
+                  <TableColumn fx:id="own_phone_column" prefWidth="87.0" text="Телефон" />
+                    </columns>
+                </TableView>
+                <Button fx:id="back_button" layoutX="28.0" layoutY="14.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="92.0" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px\;" text="Назад" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="add_button" layoutX="211.0" layoutY="14.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="92.0" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px;" text="Додати" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="delete_button" layoutX="347.0" layoutY="14.0" mnemonicParsing="false" onMousePressed="#Delete" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px;" text="Видалити" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="edit_button" layoutX="940.0" layoutY="572.0" mnemonicParsing="false" onMousePressed="#EditPatientData" style="-fx-background-color: #ffd58d; -fx-background-radius: 5px;" text="Редагувати" textFill="WHITE">
+                    <font>
+                        <Font name="Ayuthaya" size="15.0" />
+                    </font>
+                </Button>
+                <TextField fx:id="search_field" layoutX="637.0" layoutY="16.0" prefHeight="29.0" prefWidth="152.0" promptText="Введіть дані" style="-fx-background-radius: 5px;" />
+                <Label layoutX="558.0" layoutY="16.0" text="Пошук:" textFill="MOCCASIN">
+                    <font>
+                        <Font name="Ayuthaya" size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="884.0" layoutY="14.0" text="Редагувати дані:" textAlignment="CENTER" textFill="MOCCASIN" textOverrun="CENTER_WORD_ELLIPSIS">
+                    <font>
+                        <Font name="Ayuthaya" size="21.0" />
+                    </font>
+                    <effect>
+                        <Bloom />
+                    </effect>
+                </Label>
+                <TextField fx:id="id_field" layoutX="907.0" layoutY="54.0" prefHeight="32.0" prefWidth="175.0" promptText="Персональний код" style="-fx-background-radius: 5px;" />
+                <TextField fx:id="name_field" layoutX="907.0" layoutY="98.0" prefHeight="32.0" prefWidth="175.0" promptText="Кличка тварини" style="-fx-background-radius: 5px;" />
+                <TextField fx:id="kind_field" layoutX="907.0" layoutY="144.0" prefHeight="32.0" prefWidth="175.0" promptText="Вид тварини" style="-fx-background-radius: 5px;" />
+                <TextField fx:id="breed_field" layoutX="907.0" layoutY="190.0" prefHeight="32.0" prefWidth="175.0" promptText="Порода" style="-fx-background-radius: 5px;" />
+                <TextField fx:id="age_field" layoutX="907.0" layoutY="237.0" prefHeight="32.0" prefWidth="175.0" promptText="Вік тварини" style="-fx-background-radius: 5px;" />
+                <TextField fx:id="gender_field" layoutX="907.0" layoutY="283.0" prefHeight="32.0" prefWidth="175.0" promptText="Стать" style="-fx-background-radius: 5px;" />
+                <TextField fx:id="vaccination_field" layoutX="907.0" layoutY="329.0" prefHeight="32.0" prefWidth="175.0" promptText="Наявність вакцин" style="-fx-background-radius: 5px;" />
+                <TextField fx:id="health_field" layoutX="907.0" layoutY="377.0" prefHeight="32.0" prefWidth="175.0" promptText="Стан  здоровʼя" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="owner_name_field" layoutX="907.0" layoutY="423.0" prefHeight="32.0" prefWidth="175.0" promptText="ПІБ хазяїна" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="adress_field" layoutX="907.0" layoutY="469.0" prefHeight="32.0" prefWidth="175.0" promptText="Адреса проживання" style="-fx-background-radius: 5px;" />
+            <TextField fx:id="phone_field" layoutX="907.0" layoutY="517.0" prefHeight="32.0" prefWidth="175.0" promptText="Номер телефону" style="-fx-background-radius: 5px;" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="474.0" layoutY="14.0" text="HappyPets" textFill="#d7a7d7">
+            <font>
+                <Font name="Ayuthaya" size="28.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
