@@ -15,7 +15,7 @@ Ann
 ann12Q
 
 ## What user can do in this app?
-User can add, delete and edit information in database.
+User can add, delete and edit information in database. Also user can search info by name
 
 ## Here how it looks like:
 Authorization form:
