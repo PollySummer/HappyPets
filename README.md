@@ -14,6 +14,9 @@ Ann
 ## password:
 ann12Q
 
+## What user can do in this app?
+User can add, delete and edit information in database.
+
 ## Here how it looks like:
 Authorization form:
 ![login_form](https://github.com/PollySummer/HappyPets/blob/main/images/login_form.png)
